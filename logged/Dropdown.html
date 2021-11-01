@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> 
+
+<style>
+.nav-tabs
+ {
+   border-color:#004A00;
+   width:60%;
+ }
+
+.nav-tabs > li a { 
+    border: 1px solid #004A00;
+    background-color:#004A00; 
+    color:#fff;
+    }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color:#D5FFD5;
+    color:#000;
+    border: 1px solid #1A3E5E;
+    border-bottom-color: transparent;
+    }
+
+.nav-tabs > li > a:hover{
+  background-color: #D5FFD5 !important;
+    border-radius: 5px;
+    color:#000;
+
+} 
+
+.tab-pane {
+    border:solid 1px #004A00;
+    border-top: 0; 
+    width:60%;
+    background-color:#D5FFD5;
+    padding:5px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h3>Give your score!</h3>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  
+  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Select Round <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#round1tab" role="tab" data-toggle="tab">Round one-Casual Wear</a></li>
+                <li><a href="#round2tab" role="tab" data-toggle="tab">Round two-Swim Wear</a></li>
+                <li><a href="#round3tab" role="tab" data-toggle="tab">Round three-Caltural Wear</a></li>
+                <li><a href="#round4tab" role="tab" data-toggle="tab">Round four-Evening Wear</a></li>
+            </ul>
+  </li>  
+  
+</ul>
+</li>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane" id="round1tab">
+    <form>
+    <fieldset>
+        <legend>Scoring Cart</legend>
+        <div class="form-group">
+            <label>Introduction</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group">
+                <label>Confidence</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group">
+                    <label>Personality</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group">
+                            <label>Total</label>
+                            <output id="result"></output>
+                            </div>
+                            </fieldset>
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result').val(totalSum);
+                                });
+
+                            </script> </div>
+
+
+  <div class="tab-pane" id="round2tab">
+<form>
+    <fieldset>
+        <legend>Scoring Cart</legend>
+        <div class="form-group">
+            <label>Natural beauty</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group">
+                <label>Healthy Figure</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group">
+                    <label>Swim Suits</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group">
+                            <label>Total</label>
+                            <output id="result2"></output>
+                            </div>
+                            </fieldset>
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result2').val(totalSum);
+                                });
+
+                            </script></div>
+
+  <div class="tab-pane" id="round3tab">
+    <form>
+    <fieldset>
+        <legend>Scoring Cart</legend>
+        <div class="form-group">
+            <label>Uniqueness of Culture</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group">
+                <label>Talent and Stage presence</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group">
+                    <label>Photogenic</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group">
+                            <label>Total</label>
+                            <output id="result3"></output>
+                            </div>
+                            </fieldset>
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result3').val(totalSum);
+                                });
+
+                            </script></div>
+
+  <div class="tab-pane" id="round4tab">
+    <form>
+    <fieldset>
+        <legend>Scoring Cart</legend>
+        <div class="form-group">
+            <label>Onstage questions- ability to answer questions well</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group">
+                <label>Communication Skills</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group">
+                    <label>Eye contact, Style, Evening Gown/Suit</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group">
+                            <label>Total</label>
+                            <output id="result4"></output>
+                            </div>
+                            </fieldset>
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result4').val(totalSum);
+                                });
+
+                            </script>
+                            </div>  
+                            Round1 : <output type="text" name="result" id="qty"><br>
+                            Round2 : <output type="text" name="result2" id="qty"><br>
+                            Round3 : <output type="text" name="result3" id="qty"><br>
+                            Round4 : <output type="text" name="result4" id="qty"><br>
+                            <br>
+                            Total : <output type="text" name="total" id="total">
+                            
+                            <a href="javascript:sumInputs()">Sum</a>
+                            
+
+</body>
+</html>
+

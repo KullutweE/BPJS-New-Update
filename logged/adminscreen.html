@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/Admin.css">
+    <!-- <link rel="stylesheet" href="../assets/css/main.css" /> -->
+    <link rel="stylesheet" href="../assets/css/logo.css" />
+		<link rel="stylesheet" href="../assets/css/nav.css" />
+    <link rel="stylesheet" href="http://www.ium.edu.na/css/searchstyle.css">
+		<link rel="stylesheet" href="http://www.ium.edu.na/css/PhotoGallery.css">
+		<link rel="stylesheet" href="http://www.ium.edu.na/css/custom.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_ix24sNL9wAfLPZCoZPcWb");
+    })();
+    </script>
+    <title>BPJS-Admin Screen</title>
+</head>
+
+<div class="jumbotron top-jumbotron ">
+
+  <div class="container-fluid">
+  
+    <div class= "row">
+    <div class="col-xs-6 col-md-2 col-lg-2">
+  
+    <!-- <div class="image fit"> -->
+  
+      <a href="#"><img src="http://www.ium.edu.na/image/IUM new Logo.png" alt="IUM logo" class="img-responsive"></a>
+  
+    </div>
+  
+    </div>
+    </div>
+    </div>
+
+<body>
+<!-- TAB CONTROLLERS -->
+<input id="panel-1-ctrl"
+       class="panel-radios" type="radio" name="tab-radios" checked>
+<input id="panel-2-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-3-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-4-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-5-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-6-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="nav-ctrl"
+       class="panel-radios" type="checkbox" name="nav-checkbox">
+
+<header id="introduction">
+  <h1>Admin Portal</h1><br>
+  <button id="logout">Logout</button>
+</header>
+
+<!-- TABS LIST -->
+<ul id="tabs-list">
+    <!-- MENU TOGGLE -->
+    <label id="open-nav-label" for="nav-ctrl"></label>
+    <li id="li-for-panel-1">
+      <label class="panel-label"
+             for="panel-1-ctrl">Manage Judges</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-2">
+      <label class="panel-label"
+             for="panel-2-ctrl">Applications</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-3">
+      <label class="panel-label"
+             for="panel-3-ctrl">Pegeant Criteria</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-4">
+      <label class="panel-label"
+             for="panel-4-ctrl">Contestant</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-5">
+      <label class="panel-label"
+             for="panel-5-ctrl">Rejected Applications</label>
+    </li><!--INLINE-BLOCK FIX
+    --><li id="li-for-panel-6" class="last">
+      <label class="panel-label"
+             for="panel-6-ctrl">Results</label>
+    </li>
+    <label id="close-nav-label" for="nav-ctrl">Close</label>
+</ul>
+
+<!-- THE PANELS -->
+<div id="panels">
+  <div class="container">
+      <!--Judge panel done-->
+      <section id="panel-1">
+        <main>
+          <header>
+              <h3>List of Judges</h3>
+              <p>Enter new judges, edit existing judges and cancel judge account</p>
+            </header>
+            <div class="table-wrapper">
+              <table class="table-users">
+                <tr>
+                  <th>Firts Name</th>
+                  <th>Last Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>Job Title</th>
+                  <!-- <th>Action</th> -->
+                </tr>
+              </table>
+              <button class="btn btn-add">Add User</button>
+            </div>
+            <!-- Add Modal -->
+            <div class="add-modal modal-wrapper">
+              <div class="modal">
+                <div class="modal-header"><h3>Add New Judge</h3></div>
+                <div class="modal-body">
+                  <form class="form" autocomplete="off" id="addjudge" required>
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                    <input type="text" name="phone" placeholder="Phone" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="job_title" placeholder="Jobtitle" required>
+                    <input type="password" name="password" id="password" placeholder="Judge Password" autocomplete required>
+                    <button class="btn ">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Edit Modal -->
+            <div class="edit-modal modal-wrapper">
+              <div class="modal">
+                <div class="modal-header"><h3>Edit Judge Creditials</h3></div>
+                <div class="modal-body">
+                  <form class="form" autocomplete="off">
+                    <input type="text" name="firstName" placeholder="First Name">
+                    <input type="text" name="lastName" placeholder="Last Name">
+                    <input type="text" name="phone" placeholder="Phone">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="job_title" placeholder="Job title">
+                    <input type="password" name="password" placeholder="Judge Password" disabled>
+                    <button class="btn">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+<!--           
+          <button onclick="sadd()">Add Judge</button>
+          <button onclick="sedit()">Edit Judge</button>
+          <button onclick="sdelete()">Delete Judge</button>
+          <div id="add-j-div" style="display: none;"> 
+          </div>
+          <div id="edit-j-div" style="display: none;"> 
+              edit
+          </div>
+          <div id="delete-j-div" style="display: none;"> 
+              delete
+          </div>
+      -->
+        </main>
+
+      </section>
+
+
+      
+     <!--Applicant panel-->
+    <section id="panel-2">
+      <main>
+        <header>
+            <h3>List of Applicants</h3>
+            <p>View applicant profile, accept or reject applicant</p>
+          </header>
+          <div class="table-wrapperapp">
+            <table class="table-usersapp">
+              <tr>
+                <th>Firts Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Nationality</th>
+                <th>Student Number</th>
+                <th>Contestant Number</th>
+                <!-- <th>Action</th> -->
+
+              </tr>
+            </table>
+            <button class="btn btn-add">Add User</button>
+          </div>
+          <!-- Add Modal -->
+          <div class="add-modalapp modal-wrapperapp">
+            <div class="modal">
+              <div class="modal-header"><h3>Add New Judge</h3></div>
+              <div class="modal-body">
+                <form class="form" autocomplete="off" id="applicant" required>
+                  <input type="text" name="firstName" placeholder="First Name" required>
+                  <input type="text" name="lastName" placeholder="Last Name" required>
+                  <input type="text" name="phone" placeholder="Phone" required>
+                  <input type="email" name="email" placeholder="Email" required>
+                  <input type="text" name="job_title" placeholder="Jobtitle" required>
+                  <button class="btnaccept ">Accept</button>
+                  <button class="btnreject ">Reject</button>
+                </form>
+              </div>
+            </div>
+          </div>
+      </main>
+    </section>
+
+
+
+    <!--Criteria List panel done-->
+    <section id="panel-3">
+        <main>
+            <header>
+                <h3>List of Criteria</h3>
+                <p>Here you can add, edit or delete judging criterias <br></p>
+              </header>
+
+              <div class="table-wrapperc">
+                <table class="table-usersc">
+                  <tr>
+                    <th>Name</th>
+                    <th>Rate</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                  </tr>
+                </table>
+                <button class="btn btn-addc">Add Criteria</button>
+              </div>
+              <!-- Add Modal -->
+              <div class="add-modalc modal-wrapperc">
+                <div class="modalc">
+                  <div class="modal-header"><h3>Add New Criteria</h3></div>
+                  <div class="modal-bodyc">
+                    <form class="form" autocomplete="off">
+                      <input type="text" name="Name" placeholder="Name">
+                      <input type="text" name="Rate" placeholder="Rate range [1-10/1-20/1-30]">
+                      <input type="text" name="Description" placeholder="Description">
+                      <button class="btn btn-modalc">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Edit Modal -->
+              <div class="edit-modalc modal-wrapperc">
+                <div class="modalc">
+                  <div class="modal-header"><h3>Edit Criteria</h3></div>
+                  <div class="modal-bodyc">
+                    <form class="form" autocomplete="off">
+                      <input type="text" name="Name" placeholder="Name">
+                      <input type="text" name="Rate" placeholder="Rate range [1-10/1-20/1-30]">
+                      <input type="text" name="Description" placeholder="Description">
+                      <button class="btn btn-modalc">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </main>
+    </section>
+
+    <section id="panel-5">
+      <main>
+        <h1>Menu</h1>
+        
+    </main>
+    </section>
+    </div>
+    </div>
+    
+    
+
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    
+    <script src="../assets/js/hideshow.js"></script>
+    <script src="../assets/js/criteria.js"></script>
+    <script src="../assets/js/adminlogout.js"></script>
+    <script src="../assets/js/contest.js"></script>
+</body>
+</html>

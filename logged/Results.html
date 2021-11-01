@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/Admin.css">
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/logo.css" />
+    <link rel="stylesheet" href="http://www.ium.edu.na/css/searchstyle.css">
+    <link rel="stylesheet" href="http://www.ium.edu.na/css/PhotoGallery.css">
+    <link rel="stylesheet" href="http://www.ium.edu.na/css/custom.css">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+ 
+    (function() {
+    emailjs.init("user_ix24sNL9wAfLPZCoZPcWb");
+    })();
+    </script>
+    <title>BPJS-Judge Portal</title>
+
+   <style>
+     h1{
+       color: black;
+     }
+     
+     main{
+      color: black;
+     }
+    label{
+      color: black;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 18px;
+    }
+    legend{
+      color: black;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+    }
+     .container{
+       background-color: lightblue;
+       color: black;
+     }
+     .nav-tabs
+ {
+   border-color:#001154;
+   width:40%;
+ }
+
+.nav-tabs > li a {
+    border: 1px solid #8d2d2d;
+    background-color:lightblue;
+    color: black;
+    }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color:#8d2d2d;
+    color:white;
+    border: 1px solid #1A3E5E;
+    border-bottom-color: transparent;
+    }
+
+.nav-tabs > li > a:hover{
+  background-color: #001154 !important;
+    border-radius: 5px;
+    color:white;
+
+}
+
+.tab-pane {
+    border:solid 1px #8d2d2d;
+    border-top: 0;
+    width:40%;
+    padding:5px;
+}
+       
+      table, td, th {
+        border: 1px solid black;
+      }
+     
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+     
+      </style>
+
+  </head>
+
+
+ 
+
+<body>
+<input id="panel-3-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-4-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-5-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+
+<header id="introduction">
+  <h1>Judge Portal</h1><br>
+  <button id="logout">Logout</button>
+</header>
+
+<!-- TABS LIST -->
+<ul id="tabs-list">
+    <!-- MENU TOGGLE -->
+    <li id="li-for-panel-3">
+      <label class="panel-label"
+             for="panel-3-ctrl">Pegeant Criteria</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-4">
+      <label class="panel-label"
+             for="panel-4-ctrl">Contestant</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-5">
+      <label class="panel-label"
+             for="panel-5-ctrl">Results</label>
+    </li>
+</ul>
+
+
+<!-- THE PANELS -->
+<div id="panels">
+  <div class="container">
+     
+     <!--Applicant panel-->
+    <section id="panel-4">
+      <main>
+        <header>
+            <h3>List of Contestants</h3>
+            <p>View contestants profile</p>
+          </header>
+          <div class="table-wrapper">
+            <table class="table-users">
+              <tr>
+                <th>Firts Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Nationality</th>
+                <th>Student Number</th>
+                <th>Contestant Number</th>
+              </tr>
+            </table>
+            <!-- must be a delete button(disqualify) -->
+            <button class="btn btn-add">Add User</button>
+          </div>
+          </main>
+          </section>
+          </div>
+          </div>
+         
+    <!--Criteria List panel done-->
+    <div id="panels">
+      <div class="container">
+         
+    <section id="panel-3">
+        <main>
+            <header>
+              <h3 style="padding-top:10px">Mr and Miss IUM Judging Criteria 2021</h3>
+              <p>Here is the 2021 Judging Criteria</p>  
+            </header>
+             
+  <table>
+    <tr>
+      <th>Rounds</th>
+      <th>Criteria</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td>Round1-Introduction</td>
+      <td>Confidence, Eye Contact, Smile</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Round2-Casual Wear</td>
+      <td>Unique style, Personality, Talent</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>JRound3-Swim Wear</td>
+      <td>Swim Suits, Healthy Body Figure, Audience Interaction</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Round4-Evening Wear</td>
+      <td>Gown or Suit, Ability to answer judge question, Authenticity and Individuality</td>
+      <td>30</td>
+    </tr>
+  </table>
+</div>
+</main>
+</section>
+</div>
+</div>
+ 
+<div id="panels">
+  <div class="container">
+    <section id="panel-5">
+     
+            <header>
+                <h3>List of Criteria</h3>
+                <p>Use the dropdown list to change round and view criteria for rating</p>
+              </header>
+              <form style="width: 20%" action="/action_page.php">
+                <label for="quantity">Enter the Contestant Number:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="20">
+                <input type="submit">
+              </form>
+              <ul class="nav nav-tabs" role="tablist">
+ 
+                <li class="dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Select Round <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#round1tab" role="tab" data-toggle="tab">Round one-Casual Wear</a></li>
+                              <li><a href="#round2tab" role="tab" data-toggle="tab">Round two-Swim Wear</a></li>
+                              <li><a href="#round3tab" role="tab" data-toggle="tab">Round three-Caltural Wear</a></li>
+                              <li><a href="#round4tab" role="tab" data-toggle="tab">Round four-Evening Wear</a></li>
+                          </ul>
+                </li>  
+               
+              </ul>
+           
+
+    <div class="tab-content">
+  <div class="tab-pane" id="round1tab">
+    <form>
+ 
+        <legend>Round one-Casual Wear</legend>
+        <div class="form-group">
+            <label>Introduction</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group">
+                <label>Confidence</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group">
+                    <label>Personality</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group">
+                            <label>Total</label>
+                            <output id="result"></output>
+                            </div>
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result').val(totalSum);
+                                });
+
+                            </script>
+</div>
+
+
+
+  <div class="tab-pane" id="round2tab">
+<form>
+ 
+        <legend>Round two-Swim Wear</legend>
+        <div class="form-group2">
+            <label>Natural beauty</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group2">
+                <label>Healthy Figure</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group2">
+                    <label>Swim Suits</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group2">
+                            <label>Total</label>
+                            <output id="result2"></output>
+                            </div>
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group2').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group2 .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result2').val(totalSum);
+                                });
+
+                            </script></div>
+
+
+  <div class="tab-pane" id="round3tab">
+    <form>
+   
+        <legend>Round three-Caltural Wear</legend>
+        <div class="form-group3">
+            <label>Uniqueness of Culture</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group3">
+                <label>Talent and Stage presence</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group3">
+                    <label>Photogenic</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group3">
+                            <label>Total</label>
+                            <output id="result3"></output>
+                            </div>
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group3').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group3 .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result3').val(totalSum);
+                                });
+
+                            </script></div>
+
+  <div class="tab-pane" id="round4tab">
+    <form>
+ 
+        <legend>Round four-Evening Wear</legend>
+        <div class="form-group4">
+            <label>Onstage questions- ability to answer questions well</label>
+            <input type="number" class="form-control prc"/>
+            </div>
+            <div class="form-group4">
+                <label>Communication Skills</label>
+                <input type="number" class="form-control prc"/>
+                </div>
+                <div class="form-group4">
+                    <label>Eye contact, Style, Evening Gown/Suit</label>
+                    <input type="number" class="form-control prc"/>
+                    </div>
+                        <div class="form-group4">
+                            <label>Total</label>
+                            <output id="result4"></output>
+                            </div>
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                            </form>
+
+                            <script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group4').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group4 .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result4').val(totalSum);
+                                });
+
+                            </script>
+<div class="form-group4">
+                            <label>Overal Total</label>
+                            <output id="result"></output>
+                            </div>
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                            </form>
+                            </div>
+<script src="jquery.min.js"></script>
+                            <script>
+                                $('.form-group4').on('input','.prc',function(){
+                                    var totalSum = 0;
+                                    $('.form-group4 .prc').each(function(){
+                                        var inputVal = $(this).val();
+                                        if($.isNumeric(inputVal)){
+                                            totalSum += parseFloat(inputVal);
+                                        }
+                                    });
+                                    $('#result').val(totalSum);
+                                });
+                          
+
+                         
+    // <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+ 
+    // <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    // <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    // <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    // <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    // <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+   
+    <script src="../assets/js/hideshow.js"></script>
+    <script src="../assets/js/criteria.js"></script>
+    <script src="../assets/js/adminlogout.js"></script>
+    <script src="../assets/js/contest.js"></script>
+</body>
+</html>
