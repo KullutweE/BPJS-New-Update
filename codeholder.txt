@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+	<head>
+		<title>Apply</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+			<section id="five" class="main style1">
+				<div class="container">
+					<section>
+						<a href="/index.html"><span class="icon solid fa-arrow-left"></span></a>
+						<h4 style="font-weight: bolder;">Contestant application</h4>
+						<form method="post" action="#">
+							<div class="row gtr-uniform gtr-50">
+								<!--Name-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="name" id="name" value="" placeholder="Name" required/>
+								</div>
+								<!--Surname-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="surname" id="surname" value="" placeholder="Surname" required/>
+								</div>
+								<!--Email-->
+								<div class="col-12 col-12-xsmall">
+									<input type="email" name="email" id="email" value="" placeholder="Email" required/>
+								</div>
+								<!--Student Number-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="StudentNr" id="StudentNr" value="" placeholder="Student Number" required/>
+								</div>
+								<!--Study year-->
+								<div class="col-6 col-12-xsmall">
+									<select name="studyYear" id="studyYear" required>
+										<option value="">- study Year -</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4th or beyond</option>
+									</select>
+								</div>
+								<!--Cell number-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="cell" id="cell" value="" placeholder="Cellphone Number" required/>
+								</div>
+								<!--Nationality-->
+								<div class="col-6 col-12-xsmall">
+									<select name="Nationality" id="Nationality" required>
+										<option value="">- Nationality -</option>
+										<option value="1">Namibiab</option>
+										<option value="2">Angolan</option>
+										<option value="3">South African</option>
+										<option value="4">Zambian</option>
+									</select>
+								</div>
+								<!--Hobbies-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="Hobbies" id="Hobbies" value="" placeholder="Hobbies" required/>
+								</div>
+								<!--age-->
+								<div class="col-6 col-12-xsmall">
+									<select name="Age" id="Age">
+										<option value="">- Age -</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+									</select>
+								</div>
+								<!--Study Program-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="studyProgram" id="studyProgram" value="" placeholder="Study Program" required/>
+								</div>
+								<!--Campus-->
+								<div class="col-6 col-12-xsmall">
+									<select name="Campus" id="campus">
+										<option value="">- Campus -</option>
+										<option value="1">Dorado Park Campus (Windhoek)</option>
+										<option value="2">City Campus (Windhoek)</option>
+										<option value="3">Ongwediva Campus</option>
+										<option value="4">Nkurenkuru Campus</option>
+										<option value="3">Walvis Bay Campus</option>
+										<option value="4">Swakopmund Campus</option>
+									</select>
+								</div>
+								<!--Gender-->
+								<div class="col-4 col-12-small">
+									<input type="radio" id="Male" name="Male" checked>
+									<label for="Male">Male</label>
+								</div>
+								<div class="col-4 col-12-small">
+									<input type="radio" id="Female" name="Female">
+									<label for="Female">Female</label>
+								</div>
+								<!--Gender end-->
+								<!--Why-->
+								<div class="col-12">
+									<textarea name="Why" id="Why" placeholder="Why do you want to be the next Mr / Miss IUM?" rows="6" required></textarea>
+								</div>
+								<!--What-->
+								<div class="col-12">
+									<textarea name="What" id="What" placeholder="What would you do as the next Mr / Miss Ium?" rows="6" required></textarea>
+								</div>
+								<!--Buttons-->
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="Apply" class="primary" onclick="qualityControl()"/></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</div>
+								<!--Buttons end-->
+							</div>
+						</form>
+					</section>
+				</div>
+			</section>
+		
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://www.enov.tech/">ENOV Technologies</a></li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

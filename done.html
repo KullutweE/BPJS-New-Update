@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+	<head>
+		<title>BPJS-Apply</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/logo.css" />
+		<link rel="stylesheet" href="/assets/css/nav.css" />
+		<link rel="stylesheet" href="http://www.ium.edu.na/css/searchstyle.css">
+		<link rel="stylesheet" href="http://www.ium.edu.na/css/PhotoGallery.css">
+		<link rel="stylesheet" href="http://www.ium.edu.na/css/custom.css">
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+		<link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
+	</head>
+	<div class="jumbotron top-jumbotron ">
+
+		<div class="container-fluid">
+		
+		  <div class= "row">
+			<div class="col-xs-6 col-md-2 col-lg-2">
+		
+			<!-- <div class="image fit"> -->
+		
+			  <a href="#"><img src="http://www.ium.edu.na/image/IUM new Logo.png" alt="IUM logo" class="img-responsive"></a>
+		
+			</div>
+		
+		  </div>
+		  </div>
+		  </div>
+
+	<body class="is-preload">
+
+			<section id="five" class="main style1">
+				<div class="container">
+					<section>
+						<a href="/public/index.html"><span class="icon solid fa-arrow-left"></span></a>
+						<h4 style="font-weight: bolder;">Contestant application</h4>
+
+						<form id="applicationform">
+							<div class="row gtr-uniform gtr-50">
+								<!--Name-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="name" id="name"  placeholder="Name" />
+								</div>
+								<!--Surname-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="surname" id="surname"  placeholder="Surname" />
+								</div>
+								<!--Email-->
+								<div class="col-12 col-12-xsmall">
+									<input type="email" name="email" id="email"  placeholder="Email" />
+								</div>
+								<!--Student Number-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="studentNr" id="studentNr"  placeholder="Student Number" size="9" />
+								</div>
+								<!--Study year-->
+								<div class="col-6 col-12-xsmall">
+									<select name="studyYear" id="studyYear">
+										<option value="DefaultYr">- study Year -</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4th or beyond">4th or beyond</option>
+									</select>
+								</div>
+								<!--Cell number-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="cell" id="cell"  placeholder="Cellphone Number" />
+								</div>
+								<!--Nationality-->
+								<div class="col-6 col-12-xsmall">
+									<select name="nationality" id="nationality" >
+										<option value="Default">- Nationality -</option>
+										<option value="Namibia">Namibia</option>
+										<option value="Angola">Angola</option>
+										<option value="South Africa">South Africa</option>
+										<option value="Zambia">Zambia</option>
+										<option value="Zimbabwe">Zimbabwe</option>
+										<option value="Congo">Congo</option>
+										<option value="Others">Others</option>
+
+									</select>
+								</div>
+								<!--Hobbies-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="hobbies" id="hobbies"  placeholder="Hobbies" />
+								</div>
+								<!--age-->
+								<div class="col-6 col-12-xsmall">
+									<select name="Age" id="Age" >
+										<option value="Defaultage">- Age -</option>
+										<option value="-15">-15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="+27">+27</option>
+									</select>
+								</div>
+								<!--Study Program-->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="studyProgram" id="studyProgram"  placeholder="Study Program" />
+								</div>
+								<!--Campus-->
+								<div class="col-6 col-12-xsmall">
+									<select name="campus" id="campus" >
+										<option value="Defaultcamp">- Campus -</option>
+										<option value="Dorado Park Campus (Windhoek)">Dorado Park Campus (Windhoek)</option>
+										<option value="City Campus (Windhoek)">City Campus (Windhoek)</option>
+										<option value="Ongwediva Campus">Ongwediva Campus</option>
+										<option value="Nkurenkuru Campus">Nkurenkuru Campus</option>
+										<option value="Walvis Bay Campus">Walvis Bay Campus</option>
+										<option value="Swakopmund Campus">Swakopmund Campus</option>
+									</select>
+								</div>
+								<!--Gender-->
+								<div class="col-6 col-12-xsmall">
+									<select name="gender" id="gender" >
+										<option value="DefaultGender">- Gender -</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+									</select>
+								</div>
+								<!--profilepic-->
+								<div class="col-6 col-12-xsmall">
+									<label for="profilepic">Upload of picture of yourself:</label>
+									<input type="file" id="profilepic" name="profilepic">
+								</div>
+								<!--Gender end-->
+								<!--Why-->
+								<div class="col-12">
+									<textarea name="Why" id="Why" placeholder="Why do you want to be the next Mr / Miss IUM?" rows="6"></textarea>
+								</div>
+								<!--What-->
+								<div class="col-12">
+									<textarea name="What" id="What" placeholder="What would you do as the next Mr / Miss Ium?" rows="6"></textarea>
+								</div>
+								<!--Buttons-->
+								<div class="col-12">
+									<ul class="actions">
+										<button id="subappbtn" type="submit" class="primary">Apply</button>
+										<button type="reset">Reset</button>
+									</ul>
+								</div>
+								<!--Buttons end-->
+							</div>
+						</form>
+					</section>
+				</div>
+			</section>
+		
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Fac+ebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="/public/index.html#two">Emilia Kullutwe</a></li>
+				</ul>
+			</section>
+
+			<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>    
+			<script src="/vendors/formvalidation/dist/js/FormValidation.full.min.js"></script>
+			<script src="/vendors/formvalidation/dist/js/plugins/Bulma.min.js"></script>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/contestReq.js"></script>
+
+	</body>
+</html>

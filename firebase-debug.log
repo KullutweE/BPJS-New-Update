@@ -1,0 +1,149 @@
+[debug] [2021-09-29T16:04:09.745Z] ----------------------------------------------------------------------
+[debug] [2021-09-29T16:04:09.749Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-29T16:04:09.749Z] CLI Version:   9.18.0
+[debug] [2021-09-29T16:04:09.749Z] Platform:      win32
+[debug] [2021-09-29T16:04:09.749Z] Node Version:  v14.17.2
+[debug] [2021-09-29T16:04:09.751Z] Time:          Wed Sep 29 2021 18:04:09 GMT+0200 (South Africa Standard Time)
+[debug] [2021-09-29T16:04:09.752Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-29T16:04:09.834Z] Object ".hosting.redirects[0]" in "firebase.json" is missing required property: {"missingProperty":"type"}
+[debug] [2021-09-29T16:04:09.835Z] Object ".hosting.redirects[0]" in "firebase.json" has unknown property: {"additionalProperty":"source"}
+[debug] [2021-09-29T16:04:09.835Z] Field ".hosting.redirects[0]" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:04:09.835Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2021-09-29T16:04:09.835Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:04:09.841Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-29T16:04:09.841Z] > authorizing via signed-in user (kullutwee@gmail.com)
+[debug] [2021-09-29T16:04:09.843Z] Object ".hosting.redirects[0]" in "firebase.json" is missing required property: {"missingProperty":"type"}
+[debug] [2021-09-29T16:04:09.843Z] Object ".hosting.redirects[0]" in "firebase.json" has unknown property: {"additionalProperty":"source"}
+[debug] [2021-09-29T16:04:09.843Z] Field ".hosting.redirects[0]" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:04:09.843Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2021-09-29T16:04:09.843Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\KullutweE\Desktop\Beauty Pegeant
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using test-5805a. 
+[debug] [2021-09-29T16:05:23.751Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test-5805a [none]
+[debug] [2021-09-29T16:05:25.006Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test-5805a 403
+[debug] [2021-09-29T16:05:25.007Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test-5805a {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-09-29T16:05:25.010Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-09-29T16:05:25.722Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.doSetup [as project] (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:77:27)
+    at async init (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project test-5805a. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-09-29T16:05:39.249Z] ----------------------------------------------------------------------
+[debug] [2021-09-29T16:05:39.252Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-29T16:05:39.253Z] CLI Version:   9.18.0
+[debug] [2021-09-29T16:05:39.253Z] Platform:      win32
+[debug] [2021-09-29T16:05:39.253Z] Node Version:  v14.17.2
+[debug] [2021-09-29T16:05:39.255Z] Time:          Wed Sep 29 2021 18:05:39 GMT+0200 (South Africa Standard Time)
+[debug] [2021-09-29T16:05:39.255Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-29T16:05:39.334Z] Object ".hosting.redirects[0]" in "firebase.json" is missing required property: {"missingProperty":"type"}
+[debug] [2021-09-29T16:05:39.334Z] Object ".hosting.redirects[0]" in "firebase.json" has unknown property: {"additionalProperty":"source"}
+[debug] [2021-09-29T16:05:39.335Z] Field ".hosting.redirects[0]" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:05:39.335Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2021-09-29T16:05:39.335Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:05:39.341Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-29T16:05:39.341Z] > authorizing via signed-in user (kullutwee@gmail.com)
+[debug] [2021-09-29T16:05:39.342Z] Object ".hosting.redirects[0]" in "firebase.json" is missing required property: {"missingProperty":"type"}
+[debug] [2021-09-29T16:05:39.342Z] Object ".hosting.redirects[0]" in "firebase.json" has unknown property: {"additionalProperty":"source"}
+[debug] [2021-09-29T16:05:39.343Z] Field ".hosting.redirects[0]" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:05:39.343Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2021-09-29T16:05:39.343Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\KullutweE\Desktop\Beauty Pegeant
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using test-5805a. 
+[debug] [2021-09-29T16:06:00.365Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test-5805a [none]
+[debug] [2021-09-29T16:06:01.503Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test-5805a 403
+[debug] [2021-09-29T16:06:01.504Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test-5805a {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-09-29T16:06:01.506Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-09-29T16:06:02.081Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.doSetup [as project] (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:77:27)
+    at async init (C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project test-5805a. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-09-29T16:06:10.459Z] ----------------------------------------------------------------------
+[debug] [2021-09-29T16:06:10.466Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\KullutweE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-29T16:06:10.467Z] CLI Version:   9.18.0
+[debug] [2021-09-29T16:06:10.467Z] Platform:      win32
+[debug] [2021-09-29T16:06:10.467Z] Node Version:  v14.17.2
+[debug] [2021-09-29T16:06:10.471Z] Time:          Wed Sep 29 2021 18:06:10 GMT+0200 (South Africa Standard Time)
+[debug] [2021-09-29T16:06:10.472Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-29T16:06:10.585Z] Object ".hosting.redirects[0]" in "firebase.json" is missing required property: {"missingProperty":"type"}
+[debug] [2021-09-29T16:06:10.585Z] Object ".hosting.redirects[0]" in "firebase.json" has unknown property: {"additionalProperty":"source"}
+[debug] [2021-09-29T16:06:10.586Z] Field ".hosting.redirects[0]" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:06:10.586Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2021-09-29T16:06:10.586Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:06:10.592Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-29T16:06:10.592Z] > authorizing via signed-in user (kullutwee@gmail.com)
+[debug] [2021-09-29T16:06:10.593Z] Object ".hosting.redirects[0]" in "firebase.json" is missing required property: {"missingProperty":"type"}
+[debug] [2021-09-29T16:06:10.593Z] Object ".hosting.redirects[0]" in "firebase.json" has unknown property: {"additionalProperty":"source"}
+[debug] [2021-09-29T16:06:10.594Z] Field ".hosting.redirects[0]" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2021-09-29T16:06:10.594Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2021-09-29T16:06:10.594Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\KullutweE\Desktop\Beauty Pegeant
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
