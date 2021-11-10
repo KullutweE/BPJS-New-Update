@@ -93,48 +93,209 @@ const applicationss = database.collection('Applications');
 
 subappbtn.addEventListener('click', e => {
   e.preventDefault();
-  const ID = applicationss.add({
-    // contestnum: constNum,
-    firstName: fname.value,
-    lastName: surname.value,
-    email: email.value,
-    StudentNr: studentNr.value, 
-    Study_year: year.value, 
-    Cellphone: cell.value, 
-    Nationality: String(nat.value), 
-    Hobby: hob.value, 
-    Age: Number(agey.value), 
-    Study_Program: stdyProg.value, 
-    Campus: String(campus.value), 
-    // Why: Text(why.value), 
-    // What: what.value,
-    Gender: String(sex.value),
-    Date_Created: Date.now(),     
-    // Applicant_Picture: img
-  }).then(function() {
-      var tempParams={
-      to_name:surname.value,
-      applicant_email:email.value
-    };
-    emailjs.send('service_vvzaw0o', 'template_ev8b3ai', tempParams)
-    .then(function(res) {
-      console.log('SUCCESS!', res.status, res.text);
-    }, function(error) {
-      console.log('FAILED...', error);
-    });
-    alert("Document successfully written!");
-    window.location.replace("/public/index.html");
-  
-  })
-  .catch(function(error) {
-  // The document probably doesn't exist.
-  alert("Error writing document: ", error);
-  });
+ 
 });
 
 
 
-// var frmvalidator  = new Validator("applicationform");
+
+
+
+
+// form.addEventListener('submit', e => {
+// 	e.preventDefault();
+// 	checkInputs();
+// });
+
+// function checkInputs() {
+// 	// trim to remove the whitespaces
+// 	const fnameValue = fname.value.trim();
+//   const surnameValue = surname.value.trim();
+//   const emailValue = email.value.trim();
+// 	const studentNrValue = studentNr.value.trim();
+//   const study_yearValue = year.value.trim(); 
+//   const CellphoneValue = cell.value.trim(); 
+//   const NationalityValue = String(nat.value).trim(); 
+//   const HobbyValue = hob.value.trim(); 
+//   const AgeValue = Number(agey.value).trim(); 
+//   const Study_ProgramValue = stdyProg.value.trim(); 
+//   const CampusValue = String(campus.value).trim(); 
+//   const WhyValue = Text(why.value).trim(); 
+//   const WhatValue = what.value.trim();
+//   const GenderValue = String(sex.value).trim();	
+  
+// 	if(fnameValue === '') {
+// 		setErrorFor(fname, 'First name cannot be blank');
+// 	} else {
+// 		setSuccessFor(fname);
+// 	}  
+
+// 	if(surnameValue === '') {
+// 		setErrorFor(surname, 'Surname cannot be blank');
+// 	} else {
+// 		setSuccessFor(surname);
+// 	}
+
+//   if(studentNrValue === '') {
+// 		setErrorFor(studentNr, 'Student Nr cannot be blank');
+// 	}else {
+// 		setSuccessFor(studentNr);
+// 	}
+
+//   if(study_yearValue === '') {
+// 		setErrorFor(year, 'Study year cannot be blank');
+// 	} else {
+// 		setSuccessFor(year);
+// 	}
+
+//   if(CellphoneValue === '') {
+// 		setErrorFor(cell, 'Cell cannot be blank');
+// 	} else {
+// 		setSuccessFor(cell);
+// 	}
+//   if(NationalityValue === '') {
+// 		setErrorFor(nat, 'Nationality cannot be blank');
+// 	} else {
+// 		setSuccessFor(nat);
+// 	}
+//   if(HobbyValue === '') {
+// 		setErrorFor(hob, 'Hobby cannot be blank');
+// 	} else {
+// 		setSuccessFor(hob);
+// 	}
+//   if(AgeValue === '') {
+// 		setErrorFor(agey, 'Age cannot be blank');
+// 	} else {
+// 		setSuccessFor(agey);
+// 	}
+//   if(Study_ProgramValue === '') {
+// 		setErrorFor(stdyProg, 'Study Program cannot be blank');
+// 	} else {
+// 		setSuccessFor(stdyProg);
+// 	}
+//   if(CampusValue === '') {
+// 		setErrorFor(campus, 'Campus cannot be blank');
+// 	} else {
+// 		setSuccessFor(campus);
+// 	}
+//   if(WhyValue === '') {
+// 		setErrorFor(why, 'Why textarea cannot be blank');
+// 	} else {
+// 		setSuccessFor(why);
+// 	}
+//   if(WhatValue === '') {
+// 		setErrorFor(what, 'What textarea cannot be blank');
+// 	} else {
+// 		setSuccessFor(what);
+// 	}
+//   if(GenderValue === '') {
+// 		setErrorFor(sex, 'Gender cannot be blank');
+// 	} else {
+// 		setSuccessFor(sex);
+// 	}
+	
+// 	if(emailValue === '') {
+// 		setErrorFor(email, 'Email cannot be blank');
+// 	} else if (!isEmail(emailValue)) {
+// 		setErrorFor(email, 'Not a valid email');
+// 	} else {
+// 		setSuccessFor(email);
+// 	}
+	
+// }
+
+// function setErrorFor(input, message) {
+// 	const formControl = input.parentElement;
+// 	const small = formControl.querySelector('small');
+// 	formControl.className = 'form-control error';
+// 	small.innerText = message;
+// }
+
+// function setSuccessFor(input) {
+// 	const formControl = input.parentElement;
+// 	formControl.className = 'form-control success';
+// }
+	
+// function isEmail(email) {
+// 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+// }
+
+
+
+
+
+
+
+
+
+
+
+								//email
+							// if (!email.value.match(emailRegex)) {
+							// alert('Invalid email address.');}
+							// //student nr
+							// if ((studentNr.length < 6) && (studentNr.length > 8)) {
+							// alert('Student Nr must be more than 6 and less than 8 characters long')
+							// }
+							// //first and last name
+							// if (fname.value.trim()=="") {
+							// 	alert('First name can not be blank')
+							// }
+							// if (surname.value.trim()=="") {
+							// 	alert('Surname can not be blank')
+							// }
+							// //year
+							// if (year.value=="") {
+							// 	alert('Enter Study Year')
+							// }
+							// //Cell number
+							// if (cell.value.trim()=="") {
+							// 	alert('Enter cell number')
+							// }
+							// // nationality
+							// if (String(nat.value)=="") {
+							// 	alert('Select a nationality')
+							// }
+							// //Hobbies
+							// if (hob.value.trim()=="") {
+							// 	alert('Enter your hobbies')
+							// }
+							// //age
+							// if (Number(agey.value)=="") {
+							// 	alert('Select age')
+							// }
+							// //Study Program
+							// if (stdyProg.value.trim()=="") {
+							// 	alert('Enter Study Program')
+							// }
+							// //Campus
+							// if (String(campus.value)=="") {
+							// 	alert('Select Campus')
+							// }
+							// //gender
+							// if (String(sex.value)=="") {
+							// 	alert('Select Gender')
+							// }
+							// //why
+							// if (why.value.trim()=="") {
+							// 	alert('Enter your reason for applying for competition')
+							// }
+							// //what
+							// if (what.value.trim()=="") {
+							// 	alert('Enter what you would do if you won')
+							// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,7 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />	
 		<link rel="stylesheet" href="../assets/css/logo.css" />
-		<link rel="stylesheet" href="../assets/css/nav.css" />	
+		<link rel="stylesheet" href="../assets/css/nav.css" />
+		<link rel="stylesheet" href="./assets/css/error.css">	
 		<link rel="stylesheet" href="http://www.ium.edu.na/css/searchstyle.css">
 		<link rel="stylesheet" href="http://www.ium.edu.na/css/PhotoGallery.css">	
 		<link rel="stylesheet" href="http://www.ium.edu.na/css/custom.css">
@@ -14,7 +15,6 @@
 		<script src="./gen_validatorv4.js" type="text/javascript"></script>
 		
 		<script src="https://cdn.firebase.com/js/client/2.2.0/firebase.js"></script>
-
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 		<script type="text/javascript">
 		(function() {
@@ -88,27 +88,40 @@
 					<section>
 						<a href="/public/index.html"><span class="icon solid fa-arrow-left"></span></a>
 						<h4 style="font-weight: bolder; color:white">Contestant application</h4>
-
-						<form id="applicationform">
-							<div class="row gtr-uniform gtr-50">
+						<div class="container">
+							<form id="form" class="form">
 								<!--Name-->
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name"  placeholder="Name" />
+
+								<div class="form-control">
+									<label for="fname">First Name</label>
+									<input type="text" name="fname" id="fname"  placeholder="Name" />
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
 								</div>
-								<!--Surname-->
-								<div class="col-6 col-12-xsmall">
+								<div class="form-control">
+									<label for="surname">Last Name</label>
 									<input type="text" name="surname" id="surname"  placeholder="Surname" />
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="email">Email</label>
+									<input type="email" placeholder="a@florin-pop.com" id="email" />
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
 								</div>
-								<!--Email-->
-								<div class="col-12 col-12-xsmall">
-									<input type="email" name="email" id="email"  placeholder="Email" />
-								</div>
-								<!--Student Number-->
-								<div class="col-6 col-12-xsmall">
+								<div class="form-control">
+									<label for="studentNr">Student Number</label>
 									<input type="text" name="studentNr" id="studentNr"  placeholder="Student Number" size="9" />
-								</div>
-								<!--Study year-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="studyYear">Study Year</label>
 									<select name="studyYear" id="studyYear">
 										<option value="DefaultYr">- study Year -</option>
 										<option value="1">1</option>
@@ -116,14 +129,19 @@
 										<option value="3">3</option>
 										<option value="4th or beyond">4th or beyond</option>
 									</select>
-								</div>		
-								
-								<!--Cell number-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="cell">Contact Number</label>
 									<input type="text" name="cell" id="cell"  placeholder="Cellphone Number" />
-								</div>
-								<!--Nationality-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="nationality">Nationality</label>
 									<select name="nationality" id="nationality" >
 										<option value="Default">- Nationality -</option>
 										<option value="Namibia">Namibia</option>
@@ -133,15 +151,20 @@
 										<option value="Zimbabwe">Zimbabwe</option>
 										<option value="Congo">Congo</option>
 										<option value="Others">Others</option>
-
 									</select>
-								</div>
-								<!--Hobbies-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="hobbies">Hobby</label>
 									<input type="text" name="hobbies" id="hobbies"  placeholder="Hobbies" />
-								</div>
-								<!--age-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="Age">Contestant Age</label>
 									<select name="Age" id="Age" >
 										<option value="Defaultage">- Age -</option>
 										<option value="-15">-15</option>
@@ -158,13 +181,19 @@
 										<option value="26">26</option>
 										<option value="+27">+27</option>
 									</select>
-								</div>
-								<!--Study Program-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="studyProgram">Study Program</label>
 									<input type="text" name="studyProgram" id="studyProgram"  placeholder="Study Program" />
-								</div>
-								<!--Campus-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="campus">Campus</label>
 									<select name="campus" id="campus" >
 										<option value="Defaultcamp">- Campus -</option>
 										<option value="Dorado Park Campus (Windhoek)">Dorado Park Campus (Windhoek)</option>
@@ -174,29 +203,35 @@
 										<option value="Walvis Bay Campus">Walvis Bay Campus</option>
 										<option value="Swakopmund Campus">Swakopmund Campus</option>
 									</select>
-								</div>
-								<!--Gender-->
-								<div class="col-6 col-12-xsmall">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="gender">Gender</label>
 									<select name="gender" id="gender" >
 										<option value="DefaultGender">- Gender -</option>
 										<option value="male">Male</option>
 										<option value="female">Female</option>
 									</select>
-								</div>
-								<!--profilepic-->
-								<div class="col-6 col-12-xsmall">
-									<label for="profilepic">Upload of picture of yourself:</label>
-									<input type="file" id="profilepic" name="profilepic">
-								</div>
-								<!--Gender end-->
-								<!--Why-->
-								<div class="col-12">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<!-- <div class="form-control">
+									<label for="Why">Why do you want to be the next Mr / Miss IUM?</label>
 									<textarea name="Why" id="Why" placeholder="Why do you want to be the next Mr / Miss IUM?" rows="6"></textarea>
-								</div>
-								<!--What-->
-								<div class="col-12">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>	
+								<div class="form-control">
+									<label for="What">What would you do as the next Mr / Miss Ium?</label>
 									<textarea name="What" id="What" placeholder="What would you do as the next Mr / Miss Ium?" rows="6"></textarea>
-								</div>
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>									 -->
 								<!--Buttons-->
 								<div class="col-12">
 									<ul class="actions">
@@ -204,9 +239,86 @@
 										<button type="reset">Reset</button>
 									</ul>
 								</div>
-								<!--Buttons end-->
-							</div>
-						</form>
+							</form>
+						</div>
+					
+						
+						<!-- <script>
+							const form = document.getElementById('applicationform');
+							form.addEventListener('submit', e => {
+								e.preventDefault();
+							
+							const fname = document.getElementById('name').value;
+							const surname = document.getElementById('surname').value;
+							const email = document.getElementById('email').value;
+							const studentNr = document.getElementById('studentNr').value;
+							const year = document.getElementById('studyYear').value;
+							const cell = document.getElementById('cell').value;
+							const nat = document.getElementById('nationality').value;
+							const hob = document.getElementById('hobbies').value;
+							const agey = document.getElementById('Age').value;
+							const stdyProg = document.getElementById('studyProgram').value;
+							const campus = document.getElementById('campus').value;
+							const why = document.getElementById('why').value;
+							const what = document.getElementById('what').value;
+							const sex = document.getElementById('gender').value;
+							const emailRegex = /^[0-9]+@[.campus.ium.edu.na]/;
+							//email
+							if (!email.value.match(emailRegex)) {
+							alert('Invalid email address.');}
+							//student nr
+							if (studentNr.length < 6 & studentNr.length > 8) {
+							alert('Student Nr must be more than 6 and less than 8 characters long')
+							}
+							//first and last name
+							if (fname.value.trim()=="") {
+								alert('First name can not be blank')
+							}
+							if (surname.value.trim()=="") {
+								alert('Surname can not be blank')
+							}
+							//year
+							if (year.value=="") {
+								alert('Enter Study Year')
+							}
+							//Cell number
+							if (cell.value.trim()=="") {
+								alert('Enter cell number')
+							}
+							// nationality
+							if (nat.value=="") {
+								alert('Select a nationality')
+							}
+							//Hobbies
+							if (hob.value.trim()=="") {
+								alert('Enter your hobbies')
+							}
+							//age
+							if (agey.value=="") {
+								alert('Select age')
+							}
+							//Study Program
+							if (stdyProg.value.trim()=="") {
+								alert('Enter Study Program')
+							}
+							//Campus
+							if (campus.value=="") {
+								alert('Select Campus')
+							}
+							//gender
+							if (sex.value=="") {
+								alert('Select Gender')
+							}
+							//why
+							if (why.value.trim()=="") {
+								alert('Enter your reason for applying for competition')
+							}
+							//what
+							if (what.value.trim()=="") {
+								alert('Enter what you would do if you won')
+							}
+						});
+						</script> -->
 						<!-- <script language="JavaScript" type="text/javascript" xml:space="preserve">
 							var frmvalidator  = new Validator("applicationform");
 							//names
@@ -253,7 +365,229 @@
 					</section>
 				</div>
 			</section>
-		
+			<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+		<script>
+					// Your web app's Firebase configuration
+					const firebaseConfig = {
+					apiKey: "AIzaSyBuoID-FVQH3stFpUJhQuKFFjRMQuPKnE0",
+					authDomain: "beauty-pageant-judging-system.firebaseapp.com",
+					projectId: "beauty-pageant-judging-system",
+					storageBucket: "beauty-pageant-judging-system.appspot.com",
+					messagingSenderId: "327388870081",
+					appId: "1:327388870081:web:7cc2a2ee298114ec4a6b40",
+					measurementId: "G-RB3GBY1QL6"
+					};
+					// Initialize Firebase
+					firebase.initializeApp(firebaseConfig);
+					const database = firebase.firestore();
+					const form = document.getElementById('form');
+					const fname = document.getElementById('fname');
+					const surname = document.getElementById('surname');
+					const email = document.getElementById('email');
+					const studentNr = document.getElementById('studentNr');
+					const year = document.getElementById('studyYear');
+					const cell = document.getElementById('cell');
+					const nat = document.getElementById('nationality');
+					const hob = document.getElementById('hobbies');
+					const agey = document.getElementById('Age');
+					const stdyProg = document.getElementById('studyProgram');
+					const campus = document.getElementById('campus');
+					// const why = document.getElementById('why');
+					// const what = document.getElementById('what');
+					const sex = document.getElementById('gender');
+					const applicationss = database.collection('Applications');
+
+
+					form.addEventListener('submit', e => {
+						e.preventDefault();
+						
+						checkInputs();
+						
+					});
+
+					function checkInputs() {
+						// trim to remove the whitespaces
+						const nameValue = fname.value.trim();
+						const emailValue = email.value.trim();
+						const surnameValue = surname.value.trim();
+						const studentNrValue = studentNr.value.trim();
+						const yearValue = year.value.trim();
+						const CellphoneValue = cell.value.trim(); 
+						const NationalityValue = String(nat.value).trim(); 
+						const HobbyValue = hob.value.trim(); 
+						const ageValue = agey.value.trim();
+						const Study_ProgramValue = stdyProg.value.trim(); 
+						const CampusValue = String(campus.value).trim(); 
+						const GenderValue = String(sex.value).trim();	
+						// const WhyValue = why.value.trim(); 
+						// const WhatValue = what.value.trim();
+						
+						if(true){
+						if(nameValue === '') {
+							setErrorFor(fname, 'Name cannot be blank');
+						} else {
+							setSuccessFor(fname);
+						}
+
+						if(surnameValue === '') {
+							setErrorFor(surname, 'Student Number cannot be blank');
+						} else {
+							setSuccessFor(surname);
+						}
+
+						if(emailValue === '') {
+							setErrorFor(email, 'Email cannot be blank');
+						} else if (!isEmail(emailValue)) {
+							setErrorFor(email, 'Not a valid email');
+						} else {
+							setSuccessFor(email);
+						}
+
+						if(studentNrValue === '') {
+							setErrorFor(studentNr, 'Surname cannot be blank');
+						} else {
+							setSuccessFor(studentNr);
+						}
+
+						if(yearValue === 'DefaultYr') {
+							setErrorFor(year, 'Study Year cannot be blank');
+						} else {
+							setSuccessFor(year);
+						}
+
+						if(CellphoneValue === '') {
+							setErrorFor(cell, 'Cell number cannot be blank');
+						} else {
+							setSuccessFor(cell);
+						}
+						
+						
+					  if(NationalityValue === 'Default') {
+							setErrorFor(nat, 'Nationality cannot be blank');
+						} else {
+							setSuccessFor(nat);
+						}
+
+						if(HobbyValue === '') {
+							setErrorFor(hob, 'Hobby cannot be blank');
+						} else {
+							setSuccessFor(hob);
+						}
+
+						if(ageValue === 'Defaultage') {
+							setErrorFor(agey, 'Age cannot be blank');
+						} else {
+							setSuccessFor(agey);
+						}
+
+						if(Study_ProgramValue === '') {
+							setErrorFor(stdyProg, 'Study Program cannot be blank');
+						} else {
+							setSuccessFor(stdyProg);
+						}
+
+						if(CampusValue === 'Defaultcamp') {
+							setErrorFor(campus, 'Campus cannot be blank');
+						} else {
+							setSuccessFor(campus);
+						}
+
+						if(GenderValue === 'DefaultGender') {
+							setErrorFor(sex, 'Gender cannot be blank');
+						} else {
+							setSuccessFor(sex);
+							return savedata(),sendmail();
+						}
+					// }
+					// 	// if(WhyValue === '') {
+					// 	// 	setErrorFor(why, 'Why do you want to be the next Mr / Miss IUM?');
+					// 	// } else {
+					// 	// 	setSuccessFor(why);
+					// 	// }
+
+					// 	// if(WhatValue === '') {
+					// 	// 	setErrorFor(what, 'What would you do as the next Mr / Miss Ium?');
+					// 	// } else {
+					// 	// 	setSuccessFor(what);
+					// 	// }
+					// 		else if(true){
+
+					}
+						
+				}
+					function savedata(){
+						const ID = applicationss.add({
+						// contestnum: constNum,
+						firstName: fname.value,
+						lastName: surname.value,
+						email: email.value,
+						StudentNr: studentNr.value, 
+						Study_year: year.value, 
+						Cellphone: cell.value, 
+						Nationality: String(nat.value), 
+						Hobby: hob.value, 
+						Age: Number(agey.value), 
+						Study_Program: stdyProg.value, 
+						Campus: String(campus.value), 
+						// Why: Text(why.value), 
+						// What: what.value,
+						Gender: String(sex.value),
+						Date_Created: Date.now(),     
+						// Applicant_Picture: img
+					}).then(function() {
+						var tempParams={
+						to_name:surname.value,
+						applicant_email:email.value
+						};
+						emailjs.send('service_vvzaw0o', 'template_ev8b3ai', tempParams)
+						.then(function(res) {
+						console.log('SUCCESS!', res.status, res.text);
+						}, function(error) {
+						console.log('FAILED...', error);
+						});
+						alert("Document successfully written!");
+						window.location.replace("/public/index.html");
+					})
+					.catch(function(error) {
+					// The document probably doesn't exist.
+					alert("Error writing document: ", error);
+					});
+
+					}
+
+
+					function sendmail(){
+						// .then(function() {
+						var tempParams={
+						to_name:surname.value,
+						applicant_email:email.value
+						};
+						emailjs.send('service_vvzaw0o', 'template_ev8b3ai', tempParams)
+						.then(function(res) {
+						console.log('SUCCESS!', res.status, res.text);
+						}, function(error) {
+						console.log('FAILED...', error);
+						});
+					// })
+					}
+					function setErrorFor(input, message) {
+						const formControl = input.parentElement;
+						const small = formControl.querySelector('small');
+						formControl.className = 'form-control error';
+						small.innerText = message;
+					}
+
+					function setSuccessFor(input) {
+						const formControl = input.parentElement;
+						formControl.className = 'form-control success';
+					}
+						
+					function isEmail(email) {
+						return /^[0-9]+@[.campus.ium.edu.na]/.test(email);
+					}
+
+		</script>
 
 		<!-- Footer -->
 			<section id="footer">
@@ -270,11 +604,10 @@
 			</section>
 
 
-			<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
 
 		<!-- Scripts -->
-			<script src="../assets/js/contestReq.js"></script>
+			<!-- <script src="./assets/js/contestReq.js"></script> -->
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrolly.min.js"></script>
 			<script src="../assets/js/browser.min.js"></script>
